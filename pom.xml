@@ -71,7 +71,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.jordanj.cmpt276.assignment1</mainClass>
+					<mainClass>com.jordanj.cmpt276.assignment1.Assignment1Application</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
