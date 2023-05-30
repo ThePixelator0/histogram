@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram</title>
+    <link rel="stylesheet" href="histogram.css">
+    <script src="calculate.js" defer></script>
+</head>
+<body>
+    <div class="flex-container">
+        <div id="lowerBoundsDiv"> 
+            <h1>Lower Bounds</h1>
+            <table id="lowerBoundsTable">
+                <tr><td>Max</td><td><input type="number" value="100" id="boundsInput0" /></td></tr>
+                <tr><td>A+</td><td><input type="number" value="95" id="boundsInput1" /></td></tr>
+                <tr><td>A</td><td><input type="number" value="90" id="boundsInput2" /></td></tr>
+                <tr><td>A-</td><td><input type="number" value="85" id="boundsInput3" /></td></tr>
+                <tr><td>B+</td><td><input type="number" value="80" id="boundsInput4" /></td></tr>
+                <tr><td>B</td><td><input type="number" value="75" id="boundsInput5" /></td></tr>   
+                <tr><td>B-</td><td><input type="number" value="70" id="boundsInput6" /></td></tr>
+                <tr><td>C+</td><td><input type="number" value="65" id="boundsInput7" /></td></tr>
+                <tr><td>C</td><td><input type="number" value="60" id="boundsInput8" /></td></tr>
+                <tr><td>C-</td><td><input type="number" value="55" id="boundsInput9" /></td></tr>
+                <tr><td>D</td><td><input type="number" value="50" id="boundsInput10" /></td></tr>
+                <tr><td>F</td><td><input type="number" value="0" id="boundsInput11" /></td></tr>
+            </table>
+        </div>
+        <div id="rightSide">
+            <div id="histogramDiv">
+                <h1>Histogram</h1>
+                <table id="histogramTable">
+                    <tr><td>A+</td><td id="hist_1"><div id="hist_1_display">0</div></td></tr>
+                    <tr><td>A</td><td id="hist_2"><div id="hist_2_display">0</div></td></tr>
+                    <tr><td>A-</td><td id="hist_3"><div id="hist_3_display">0</div></td></tr>
+                    <tr><td>B+</td><td id="hist_4"><div id="hist_4_display">0</div></td></tr>
+                    <tr><td>B</td><td id="hist_5"><div id="hist_5_display">0</div></td></tr>   
+                    <tr><td>B-</td><td id="hist_6"><div id="hist_6_display">0</div></td></tr>
+                    <tr><td>C+</td><td id="hist_7"><div id="hist_7_display">0</div></td></tr>
+                    <tr><td>C</td><td id="hist_8"><div id="hist_8_display">0</div></td></tr>
+                    <tr><td>C-</td><td id="hist_9"><div id="hist_9_display">0</div></td></tr>
+                    <tr><td>D</td><td id="hist_10"><div id="hist_10_display">0</div></td></tr>
+                    <tr><td>F</td><td id="hist_11"><div id="hist_11_display">0</div></td></tr>
+                </table>
+            </div>
+            <div id="newGradeDiv">
+                New Grade: <input type="number" id="newGradeInput" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

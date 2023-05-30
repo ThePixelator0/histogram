@@ -1,0 +1,76 @@
+.flex-container {
+    display: flex;
+}
+
+#lowerBoundsDiv, #rightSide {
+    width: 250px;
+    height: 400px;
+    margin: 0 10px;
+}
+
+#histogramDiv {
+    height: 130%;
+    margin-bottom: 20px;
+}
+
+#newGradeDiv {
+    height: 15%;
+    padding:10px;
+}
+
+#rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#lowerBoundsDiv, #histogramDiv, #newGradeDiv {
+    border-radius: 5px;
+    background-color: #E9EFF1;
+    padding-left: 5px;
+}
+
+h1 {
+    font-size: large;
+    color: #B5131A;
+}
+
+input {
+    width: 50px;
+}
+
+#lowerBoundsTable {
+    border-spacing: 20px 0;
+}
+
+#histogramTable {
+    border-spacing: 35px 0;
+    table-layout: fixed;
+}
+
+td {
+    text-align: left;
+    font-size: medium;
+    padding: 3px;
+}
+
+#hist_1_display, 
+#hist_2_display, 
+#hist_3_display, 
+#hist_4_display, 
+#hist_5_display, 
+#hist_6_display, 
+#hist_7_display, 
+#hist_8_display, 
+#hist_9_display,
+#hist_10_display,
+#hist_11_display {
+    background-color: orange;
+    width: 10px;
+    height: 100%;
+    padding-left: 2px;
+    border-radius: 3px;
+    border: 1px solid darkgoldenrod;
+    transition: width 0.5s ease;
+}   
