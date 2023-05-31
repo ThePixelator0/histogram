@@ -28,7 +28,18 @@ function getValueFromInput(evt) {
     return elementValue;
 }
 
+function checkValue(value) {
+    return !(value < bounds.values[11] || value > bounds.values[0]);
+}
+
 function getIndexFromBounds(value) {
+    if (!checkValue(value)) {
+        document.getElementById("newGradeOutput").innerHTML = "Invalid value!";
+        return -1;
+    } else {
+        document.getElementById("newGradeOutput").innerHTML = "";
+    }
+
     for (let i = 1; i < 12; i++) {
         if (Number(value) >= bounds.values[i])  {
             return i;
@@ -39,6 +50,9 @@ function getIndexFromBounds(value) {
 
 function addValueToHistogram(value, newValue) {
     var index = getIndexFromBounds(value);
+
+    if (index == -1) return;
+
     if (newValue == true)  {
         numGrades.inputValues.push(value);
         numGrades.totalInputs += 1;
