@@ -4,10 +4,13 @@ var numGrades = { inputValues:[], totalInputs:0, values:[0, 0, 0, 0, 0, 0, 0, 0,
 function getBounds() {
     for (let i = 0; i < 12; i++) {
         bounds.values[i] = document.getElementById("boundsInput" + i).value;
+        console.log(bounds.valueNames[i] + ": " + bounds.values[i]);
         if (i != 0 & bounds.values[i] < bounds.values[i + 1]) {
             error("Bounds for " + bounds.valueNames[i] + " < Bounds for " + bounds.valueNames[i + 1]);
         }
     }
+
+    document.getElementById("boundsOutput").innerHTML = "Retrieved Bounds!";
 
     updateHistogramValues();
 }
@@ -87,6 +90,12 @@ function error(message) {
 // Add Listeners
 document.getElementById('newGradeInput').addEventListener('keypress', histogramInputHandler)
 for (var i = 0; i < 12; i++) {
-    document.getElementById("boundsInput" + i).addEventListener('input', getBounds);
+    document.getElementById("boundsInput" + i).addEventListener('input', clearBoundsOutput);
 }
+document.getElementById("submitLowerBounds").addEventListener('click', getBounds);
 getBounds();
+clearBoundsOutput();
+
+function clearBoundsOutput() {
+    document.getElementById("boundsOutput").innerHTML = "";
+}
