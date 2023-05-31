@@ -29,11 +29,18 @@ function getValueFromInput(evt) {
 }
 
 function checkValue(value) {
-    return !(value < bounds.values[11] || value > bounds.values[0]);
+    value = Number(value);
+    console.log(bounds.values[11] + " < " + value + " < " + bounds.values[0]);
+    console.log ("value (" + value + ") < bounds.values[11] (" + bounds.valueNames[11] + ", " + bounds.values[11] + ") : " + (value < bounds.values[11]));
+    console.log ("value (" + value + ") > bounds.values[0] (" + bounds.valueNames[0] + ", " + bounds.values[0] + ") : " + (value < bounds.values[0]));
+    if (value < bounds.values[11]) return false; 
+    if (value > bounds.values[0]) return false;
+
+    return true;
 }
 
 function getIndexFromBounds(value) {
-    if (!checkValue(value)) {
+    if (checkValue(value) == false) {
         document.getElementById("newGradeOutput").innerHTML = "Invalid value!";
         return -1;
     } else {
